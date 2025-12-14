@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>✨ EL SANTUARIO DE ISMAEL ✨</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <style>
+        /* LAYOUT ESPECÍFICO DEL INDEX (ESTILO REVISTA FEA) */
+        
+        /* Contenedor principal tipo "Holy Grail Layout" */
+        .contenedor-maestro {
+            display: grid;
+            grid-template-columns: 250px 1fr 250px; /* Izq | Centro | Der */
+            gap: 10px;
+            width: 95%;
+            margin: 0 auto;
+            background-color: #c0c0c0; /* Gris Windows 95 */
+            border: 5px outset white;
+            padding: 10px;
+        }
+
+        /* Estilos para las cajas de las columnas */
+        .sidebar, .contenido-central {
+            padding: 10px;
+            border: 3px inset white;
+            background: #000080; /* Azul oscuro */
+            color: yellow;
+        }
+
+        /* Header gigante */
+        header {
+            grid-column: 1 / -1; /* Ocupa todo el ancho */
+            background: red;
+            border: 5px dashed yellow;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Tarjetas de Hobbies */
+        .hobby-card {
+            background: linear-gradient(to bottom, #ffffff 0%, #ff99cc 100%);
+            border: 5px ridge gold;
+            margin: 20px 0;
+            padding: 15px;
+            color: black;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .hobby-card:hover {
+            transform: scale(1.05) rotate(-2deg);
+            background: lime;
+        }
+
+        .hobby-card h3 {
+            font-family: 'Times New Roman', serif;
+            text-decoration: underline;
+            color: blue;
+            font-size: 2em;
+            margin: 0;
+        }
+
+        /* Contadores y GIFs */
+        .contador-visitas {
+            font-family: 'Courier New', monospace;
+            background: black;
+            color: red;
+            border: 2px solid grey;
+            padding: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        footer {
+            grid-column: 1 / -1;
+            background: black;
+            color: lime;
+            text-align: center;
+            margin-top: 20px;
+            border: 3px double white;
+        }
+
+        /* Ajuste para móviles (se pone todo en una columna) */
+        @media (max-width: 800px) {
+            .contenedor-maestro {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .parpadeo {
+            animation: blink-animation 1s steps(5, start) infinite;
+        }
+        @keyframes blink-animation {
+            to { visibility: hidden; }
+        }
+    </style>
+</head>
+<body>
+
+    <div style="background: black; color: white; text-align: center; padding: 5px;">
+        🔊 Now Playing: Himno_del_Matcha.mp3 
+        <audio controls loop style="height: 20px;">
+            <source src="musica.wav" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <div class="contenedor-maestro">
+        
+        <header>
+            <marquee scrollamount="20" style="background: yellow; color: red; font-size: 1.5em;">
+                🚧 BIENVENIDO A LA WEB OFICIAL DE ISMAEL LAMSALLAK 🚧 SITIO EN CONSTRUCCIÓN PERMANENTE 🚧
+            </marquee>
+            
+            <h1 style="font-size: 4em; margin: 10px; text-shadow: 5px 5px 0px blue;">
+                🔥 ISMAEL ZONE 🔥
+            </h1>
+            <p style="font-size: 1.5em; background: white; color: black; display: inline-block; transform: rotate(-3deg);">
+                "Mejor que Wikipedia" - Mi abuela
+            </p>
+        </header>
+
+        <aside class="sidebar">
+            <h2 style="border-bottom: 3px dotted white;">PERFIL</h2>
+            <img src="PHOTO-2025-12-14-13-47-35.jpg" style="width: 100%; border: 5px solid lime;" alt="Admin">
+            
+            <ul style="text-align: left; padding-left: 10px;">
+                <li>Nombre: <span style="color: cyan;">Ismael</span></li>
+                <li>Clase: <span style="color: cyan;">Paladín del Matcha</span></li>
+                <li>Nivel: <span style="color: cyan;">1.80m</span></li>
+                <li>Estado: <span class="parpadeo" style="color: red;">CRÍTICO</span></li>
+            </ul>
+
+            <br>
+            <div style="text-align: center;">
+                <p>VISITAS:</p>
+                <div class="contador-visitas">84739201</div>
+            </div>
+            
+            <br>
+            <img src="https://media.giphy.com/media/l0HlPkU0kQYfA7HwY/giphy.gif" width="80%">
+        </aside>
+
+        <main class="contenido-central" style="background: url('https://media.giphy.com/media/26tOZ42Mg6pbTUPHW/giphy.gif');">
+            <h2 style="background: red; text-align: center;">⬇️ ELIGE TU DESTINO ⬇️</h2>
+
+            <div class="hobby-card">
+                <img src="https://media.giphy.com/media/3o7TKrEzvJbsQNspU2/giphy.gif" width="50px">
+                <h3>LITERATURA FEMINISTA</h3>
+                <p>Donde finjo que entiendo todo a la primera.</p>
+                <a href="literatura.html" onmouseover="this.removeAttribute('onmouseover'); alert('¡CUIDADO! SE VIENE INTENSIDAD');">
+                    [ CLICK PARA DECONSTRUIRTE ]
+                </a>
+            </div>
+
+            <div class="hobby-card" style="background: linear-gradient(to bottom, #ccffcc 0%, #006600 100%);">
+                <img src="https://media.giphy.com/media/VbQL3t857S45LgPqYk/giphy.gif" width="50px">
+                <h3>EL TÉ MATCHA</h3>
+                <p>Agua sucia pero estética.</p>
+                <a href="matcha.html" style="background: white;">[ BEBER AHORA ]</a>
+            </div>
+
+            <div class="hobby-card" style="background: linear-gradient(to bottom, #ccccff 0%, #000066 100%); color: white;">
+                <h3>MI ALTURA (1.80m)</h3>
+                <p>La única cifra que importa.</p>
+                <a href="altura.html" style="background: yellow; color: black;">[ SUBIR ]</a>
+            </div>
+
+        </main>
+
+        <aside class="sidebar" style="background: #800080;">
+            <h3>PUBLICIDAD</h3>
+            <div style="background: white; color: black; padding: 10px; border: 3px dashed black;">
+                <p>¿Cansado de ser bajo?</p>
+                <p>Haz lo que yo: <b>MIDE 1.80</b></p>
+                <button onclick="alert('No funciona así, lo siento.')">Click aquí</button>
+            </div>
+
+            <br><hr><br>
+
+            <h3>UNESCO TIME</h3>
+            <marquee direction="up" scrollamount="5" style="height: 100px; background: black;">
+                <p>Ismael: 2 minutos</p>
+                <p>El resto: 0 minutos</p>
+                <p>Ganador: ISMAEL</p>
+            </marquee>
+
+            <br><br>
+
+            <div style="height: 150px; position: relative; border: 1px solid white;">
+                <p style="font-size: 0.8em;">Apoya la causa:</p>
+                <a href="#" onmouseover="esquivarRaton(this)" style="position: absolute; background: gold; color: black; padding: 5px; font-size: 12px; text-decoration: none; border: 2px outset white;">
+                    $$ DONAR $$
+                </a>
+            </div>
+        </aside>
+
+        <footer>
+            <p>Web optimizada para Internet Explorer 4.0</p>
+            <p>© 2025 Ismael Enterprises - "Si no te gusta, hazte tu propia web"</p>
+            <marquee>GRACIAS POR SU VISITA - VUELVA PRONTO - NO OLVIDE FIRMAR EL LIBRO DE VISITAS</marquee>
+        </footer>
+
+    </div>
+
+</body>
+</html>

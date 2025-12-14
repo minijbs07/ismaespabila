@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>🍵 MATCHA & POSTUREO 🍵</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        /* Estilos específicos radiactivos */
+        body { 
+            background-color: #00ff00; 
+            background-image: repeating-linear-gradient(45deg, #00ff00 0px, #ccffcc 20px, #00ff00 40px);
+            color: #006400; /* Verde oscuro para que se lea (pero duela) */
+        }
+        .burbuja-precio {
+            background: red;
+            color: yellow;
+            border-radius: 50%;
+            padding: 30px;
+            font-size: 2em;
+            transform: rotate(15deg);
+            display: inline-block;
+            border: 5px dashed white;
+            animation: latido 0.5s infinite;
+        }
+        .tabla-hortera {
+            background: white;
+            border: 10px ridge gold;
+            margin: 0 auto;
+            width: 80%;
+            font-family: 'Courier New', monospace;
+        }
+        td { padding: 15px; border: 2px solid black; }
+    </style>
+</head>
+<body>
+    
+    <marquee direction="left" scrollamount="25" style="background: black; color: lime; font-size: 2em;">
+        🍵 SI NO ES GRADO CEREMONIAL NO ME HABLES 🍵 SOLO LECHE DE AVENA OATLY BARISTA 🍵 MI PERSONALIDAD ES ESTA BEBIDA 🍵
+    </marquee>
+
+    <h1 style="background: white; border: 5px dotted green;">EL TÉ MATCHA</h1>
+    <h2>(O cómo pagar 8€ por beber césped en Malasaña)</h2>
+
+    <div style="text-align: center; margin: 20px;">
+        <div class="burbuja-precio">PRECIO: <br> 7.50€</div>
+        <img src="https://media.giphy.com/media/VbQL3t857S45LgPqYk/giphy.gif" style="vertical-align: middle; border: 10px inset green;">
+        <div class="burbuja-precio" style="animation-duration: 0.3s; background: blue;">STATUS: <br> +1000</div>
+    </div>
+
+    <div class="caja-molesta" style="background: rgba(255,255,255,0.9); transform: rotate(-1deg);">
+        <h3>📜 MANIFIESTO DEL BEBEDOR DE MATCHA EN ESPAÑA 📜</h3>
+        <p>1. Jamás admitiré que sabe a agua de fregar el suelo.</p>
+        <p>2. Lo pido "Iced Matcha Latte con leche de avena" aunque estemos en diciembre y a 4ºC.</p>
+        <p>3. Si no subo foto a Stories etiquetando a la cafetería de especialidad, <b>no me lo he bebido</b>.</p>
+        <p>4. Juzgo a la gente que bebe café de cápsulas. Soy superior.</p>
+    </div>
+
+    <br>
+
+    <table class="tabla-hortera">
+        <tr style="background: green; color: white;">
+            <th>INGREDIENTE</th>
+            <th>REALIDAD</th>
+            <th>PRECIO JUSTIFICADO</th>
+        </tr>
+        <tr>
+            <td>Polvo Verde</td>
+            <td>Clorofila y esperanza</td>
+            <td>NO (30€/lata)</td>
+        </tr>
+        <tr>
+            <td>Leche de Avena</td>
+            <td>Agua con trazas de cereal</td>
+            <td>NO (+0.50€ extra)</td>
+        </tr>
+        <tr>
+            <td>El Batidor de Bambú</td>
+            <td>Un palito que se rompe</td>
+            <td>NO (Es estético)</td>
+        </tr>
+    </table>
+
+    <br><br>
+    
+    <button onclick="alert('¡ERROR! TU TARJETA HA SIDO RECHAZADA POR POBRE')" style="font-size: 2em; background: gold; cursor: wait;">
+        💸 COMPRAR KIT DE INICIACIÓN (150€) 💸
+    </button>
+
+    <br><br><br>
+
+    <a href="index.html" class="boton-volver" style="background: black; color: lime;">⬅️ VOLVER AL MUNDO REAL</a>
+
+</body>
+</html>

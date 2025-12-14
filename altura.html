@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>EL VIAJE HACIA EL 1.80</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        /* IMPORTANTE: position relative para que los hijos absolutos respeten la altura */
+        body {
+            position: relative; 
+            height: 15000px; /* La altura kilométrica */
+            background-image: linear-gradient(to bottom, #ff9a9e 0%, #fecfef 99%, #a18cd1 100%);
+            margin: 0;
+            overflow-x: hidden;
+            text-align: center;
+        }
+
+        /* Barra de progreso roja arriba */
+        #barra-progreso {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 25px;
+            background: red;
+            width: 0%;
+            z-index: 9999;
+            box-shadow: 0px 2px 10px black;
+        }
+
+        /* Título fijo al principio */
+        #inicio {
+            padding-top: 100px;
+            height: 500px; /* Espacio reservado para el header */
+        }
+
+        /* Las frases flotantes */
+        .frase-profunda {
+            position: absolute;
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 0px black;
+            background: rgba(255, 0, 255, 0.5); /* Fondo rosa translúcido */
+            padding: 15px;
+            border: 3px dashed yellow;
+            max-width: 350px;
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        /* EL FINAL - Ahora forzado al fondo con bottom: 0 */
+        #final-boss {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 600px; /* Altura del footer */
+            background: black;
+            color: lime;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-top: 20px ridge red;
+            z-index: 100;
+        }
+
+        .flecha-bajar {
+            font-size: 5rem;
+            animation: rebote 1s infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="barra-progreso"></div>
+
+    <div id="inicio">
+        <h1>📏 MIS 1.80 METROS 📏</h1>
+        <h2 style="background: none; border: none; font-size: 2em; color: black;">(SCROLL PARA VERDADERA DECONSTRUCCIÓN)</h2>
+        <p>¿Es la altura un privilegio patriarcal? Descúbrelo bajando.</p>
+        <div class="flecha-bajar">⬇️</div>
+    </div>
+
+    <div id="camino-de-frases"></div>
+
+    <div id="final-boss">
+        <h1 style="font-size: 6em; margin: 0; animation: arcoiris 2s infinite;">✨ 1.80 M ✨</h1>
+        <p style="font-size: 2em; color: white;">HAS LLEGADO A LA CIMA (BUENO, AL SUELO).</p>
+        
+        <img src="PHOTO-2025-12-14-13-47-35.jpg" width="300" style="transform: rotate(180deg); border: 10px solid lime;">
+        
+        <p>Conclusión: Mido 1.80 y el matcha está rico.</p>
+        
+        <a href="index.html" style="background: white; color: black; font-size: 30px;">⬆️ VOLVER A LA REALIDAD</a>
+    </div>
+
+    <script>
+        // --- SCRIPT GENERADOR DE CAOS FEMINISTA ---
+
+        const frases = [
+            "Rompiendo el techo de cristal con la frente",
+            "Mi altura es una performance de género",
+            "Deconstruyendo el centímetro opresor",
+            "Sororidad vertical: mirando a todos desde arriba",
+            "La masculinidad frágil mide menos de 1.75",
+            "Aliado de altura (literalmente)",
+            "Espacio seguro a 180cm del suelo",
+            "Cuestionando privilegios y estanterías altas",
+            "El patriarcado se ve pequeño desde aquí",
+            "Interseccionalidad y dolor de espalda",
+            "Leyendo a Judith Butler en zancos",
+            "No es manspreading, es que tengo las piernas largas",
+            "Empoderamiento longitudinal",
+            "Descolonizando mi talla de pantalón",
+            "1.80 de pura conciencia social",
+            "Si mides menos, también eres válido (creo)",
+            "Heteronorma vs. Alturonorma"
+        ];
+
+        const contenedor = document.getElementById('camino-de-frases');
+        const alturaTotal = 14000; // Un poco menos que el total para no tapar el final
+        const inicioGeneracion = 600; // Empezar después del título
+
+        // Generar frases cada 350 píxeles
+        for (let i = inicioGeneracion; i < alturaTotal; i += 350) { 
+            let el = document.createElement('div');
+            el.classList.add('frase-profunda');
+            
+            // Texto aleatorio
+            el.innerText = frases[Math.floor(Math.random() * frases.length)];
+            
+            // Posición vertical
+            el.style.top = i + "px";
+            
+            // Posición horizontal aleatoria (zigzag)
+            // Si es par a la izquierda, impar a la derecha, pero con aleatoriedad
+            let randomX = Math.random() * 60; // Entre 0 y 60%
+            if (Math.random() > 0.5) {
+                el.style.left = randomX + "%";
+            } else {
+                el.style.right = randomX + "%";
+            }
+
+            // Rotación ligera
+            let rot = (Math.random() * 30) - 15;
+            el.style.transform = `rotate(${rot}deg)`;
+
+            contenedor.appendChild(el);
+        }
+
+        // Controlar la barra de progreso
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("barra-progreso").style.width = scrolled + "%";
+        };
+    </script>
+</body>
+</html>
